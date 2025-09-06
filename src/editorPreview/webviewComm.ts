@@ -84,7 +84,7 @@ export class WebviewComm extends Disposable {
 		URLExt: string,
 		connection: Connection = this.currentConnection,
 		hostURI?: vscode.Uri,
-		windowId?: number | undefined,
+		windowId?: number | undefined
 	): Promise<string> {
 		if (URLExt.length > 0 && URLExt[0] == '/') {
 			URLExt = URLExt.substring(1);
@@ -222,7 +222,7 @@ export class WebviewComm extends Disposable {
 				-->
 				<meta http-equiv="Content-Security-Policy" content="
 					default-src 'none';
-					connect-src ${wsServerAddr};
+					connect-src *;
 					font-src ${this._panel.webview.cspSource};
 					style-src ${this._panel.webview.cspSource};
 					script-src 'nonce-${nonce}';
