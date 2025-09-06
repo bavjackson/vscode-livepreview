@@ -226,7 +226,7 @@ export class WebviewComm extends Disposable {
 					font-src ${this._panel.webview.cspSource};
 					style-src ${this._panel.webview.cspSource};
 					script-src 'nonce-${nonce}';
-					frame-src ${httpServerAddr};
+					frame-src *;
 				">
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
